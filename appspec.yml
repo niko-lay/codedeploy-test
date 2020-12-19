@@ -3,3 +3,14 @@ os: linux
 files:
   - source: ./index.php
     destination: /
+hooks:
+  BeforeInstall:
+    - location: echo BeforeInstall
+      runas: root
+  ApplicationStop:
+    - location: echo ApplicationStop
+      runas: root
+  ApplicationStart:
+    - location: echo ApplicationStart
+      runas: root
+
